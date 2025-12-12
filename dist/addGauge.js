@@ -11,8 +11,12 @@ const gaugeStructure = new prom_client_1.default.Gauge({
     labelNames: ["mehtod", "route", "status_code"]
 });
 function addCounter(req, res, next) {
+    gaugeStructure.inc({
+        mehtod: req.method,
+        route: req.path,
+    });
     res.on("finish", () => {
-        gaugeStructure.inc({
+        gaugeStructure.dec({
             mehtod: req.method,
             route: req.path,
             status_code: res.statusCode

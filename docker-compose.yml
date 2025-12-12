@@ -4,16 +4,16 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - monitoring
+      - monitoring 
 
   prometheus:
     image: prom/prometheus:latest
     volumes:
       - ./:/etc/prometheus
-    ports:
+    ports:   
       - "9090:9090"
     networks:
       - monitoring
 
 networks:
-  monitoring:
+  monitoring: 

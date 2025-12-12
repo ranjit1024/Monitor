@@ -11,7 +11,7 @@ export function addCounter(req:Request, res:Response, next:NextFunction){
     gaugeStructure.inc({
         mehtod:req.method,
         route:req.path,
-    })
+    });
     res.on("finish", ()=>{
         gaugeStructure.dec({
         mehtod:req.method,
