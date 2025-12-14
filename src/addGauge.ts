@@ -19,5 +19,6 @@ export function addCounter(req:Request, res:Response, next:NextFunction){
         status_code:res.statusCode
     })
     })
+   
      next()
 }

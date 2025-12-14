@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 const prom_client_1 = __importDefault(require("prom-client"));
 const reqCounter_1 = require("./reqCounter");
 const addGauge_1 = require("./addGauge");
+const add_Hist_1 = require("./add_Hist");
 const app = (0, express_1.default)();
 const PORT = 3000;
 let users = [];
@@ -33,7 +34,7 @@ app.post("/user/add", addGauge_1.addCounter, (req, res) => {
         users: users
     });
 });
-app.post("/user/remove", (req, res) => {
+app.post("/user/remove", add_Hist_1.coutnLantancy, (req, res) => {
     const name = req.body.name;
     users = users.filter(user => user !== name);
     return res.status(200).json({

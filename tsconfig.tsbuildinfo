@@ -1,1 +1,1 @@
-{"root":["./src/addGauge.ts","./src/index.ts","./src/reqCounter.ts"],"version":"5.8.3"}
+{"root":["./src/addGauge.ts","./src/add_Hist.ts","./src/index.ts","./src/reqCounter.ts"],"version":"5.8.3"}
