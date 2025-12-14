@@ -17,7 +17,7 @@ scrape_configs:
       - targets: ['node-exporter:9100']
 ```
 ##docker-compose.yml
-
+```
 version: '3.8'
 
 services:
@@ -52,6 +52,4 @@ services:
       - "9100:9100"
     restart: unless-stopped
 
-volumes:
-  prometheus_data:
-  grafana_data:
+``
